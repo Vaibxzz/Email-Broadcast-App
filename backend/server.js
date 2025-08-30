@@ -26,8 +26,8 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: 'vern.parisian0@ethereal.email', // Your Ethereal username
-        pass: 'GJTEqPR1K929FBX85Z'             // Your Ethereal password
+        user: 'zelma.mertz@ethereal.email', // Your Ethereal username
+        pass: 'GG7e3G4G2Vtu2ZhRBk'             // Your Ethereal password
     }
 });
 
@@ -47,9 +47,12 @@ app.post('/api/broadcast', async (req, res) => {
     for (const recipient of recipients) {
         try {
             // Try to send the email
+            
+
             await transporter.sendMail({
                 // --- UPDATED LINE ---
                 from: '"Your App" <vern.parisian0@ethereal.email>', // Using your Ethereal "from" address
+                
                 to: recipient,
                 subject: subject,
                 html: body
